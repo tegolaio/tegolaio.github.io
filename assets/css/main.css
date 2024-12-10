@@ -101,6 +101,7 @@ input, select, textarea {
 	body {
 		/* background: #ffffff; */
 		background-image: url("https://raw.githubusercontent.com/tegolaio/tegolaio.github.io/refs/heads/main/images/back.png");
+		background-repeat: no-repeat;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
