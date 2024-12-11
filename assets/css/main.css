@@ -141,6 +141,10 @@ input, select, textarea {
 			}
 
 		}
+	
+	footer {
+		color: #585858;
+	}
 
 	a {
 		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
