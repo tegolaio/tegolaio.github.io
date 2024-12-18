@@ -202,6 +202,7 @@ input, select, textarea {
 	}
 
 	h1 {
+		color: #ecad0b;
 		font-family: "Henny Penny";
 		font-size: 2.75em;
 		font-weight: 700;
