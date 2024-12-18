@@ -1,5 +1,33 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+
+/* bellota-300 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Bellota';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/assets/fonts/bellota-v16-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* bellota-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Bellota';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/assets/fonts/bellota-v16-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* henny-penny-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Henny Penny';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/henny-penny-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  
 
 /*
 	Phantom by HTML5 UP
@@ -100,7 +128,7 @@ input, select, textarea {
 
 	body {
 		/* background: #ffffff; */
-		background-image: url("https://raw.githubusercontent.com/tegolaio/tegolaio.github.io/refs/heads/main/images/back.png");
+		background-image: url("/images/back.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -120,7 +148,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Child Hood", Helvetica, sans-serif;
+		font-family: "Bellota", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.75;
@@ -174,7 +202,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-family: "Magical Neverland";
+		font-family: "Henny Penny";
 		font-size: 2.75em;
 		font-weight: 700;
 		line-height: 1.3;
