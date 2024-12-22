@@ -191,7 +191,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #BC4A3C !important;
+			color: #660066 !important;
 		}
 
 	strong, b {
@@ -207,7 +207,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		color: #BC4A3C;
+		color: #660066;
 		font-family: "Henny Penny";
 		font-size: 2.75em;
 		font-weight: 700;
