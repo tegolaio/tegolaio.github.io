@@ -133,6 +133,10 @@ input, select, textarea {
 		background-size: cover;
 	}
 
+	footer {
+		background: #ecad0b !important;
+	}
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -202,7 +206,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		color: #ecad0b;
+		color: #BC4A3C;
 		font-family: "Henny Penny";
 		font-size: 2.75em;
 		font-weight: 700;
