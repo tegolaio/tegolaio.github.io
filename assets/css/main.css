@@ -206,6 +206,10 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	.logo{
+		scale: 1.5;
+	}
+
 	h1 {
 		color: #660066;
 		font-family: "Henny Penny";
