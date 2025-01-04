@@ -211,7 +211,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #ce0a0a;
+		color: black;
 		font-family: "Bellota", Helvetica, sans-serif;
 		font-size: 18pt;
 		font-weight: bold;
