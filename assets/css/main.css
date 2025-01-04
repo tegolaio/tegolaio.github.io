@@ -211,11 +211,12 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #ffffff;
+		color: #8B4513;
 		font-family: "Bellota", Helvetica, sans-serif;
-		font-size: 16pt;
-		font-weight: 300;
+		font-size: 18pt;
+		font-weight: bold;
 		line-height: 1.75;
+		text-align: justify;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -314,7 +315,12 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.1em;
+		color: #ffffff;
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 1.3;
+		margin: 0 0 1em 0;
+		letter-spacing: -0.035em;
 	}
 
 	h3 {
