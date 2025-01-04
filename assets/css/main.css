@@ -217,6 +217,7 @@ input, select, textarea {
 		font-weight: bold;
 		line-height: 1.75;
 		text-align: justify;
+		text-shadow: 1px 1px 1px black;
 	}
 
 		@media screen and (max-width: 1680px) {
