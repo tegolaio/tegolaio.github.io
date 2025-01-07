@@ -67,6 +67,30 @@ body {
     gap: 10px;
 }
 
+/* Flex header */
+
+/* Contenitore per logo e titolo */
+.logo-title {
+    display: flex;
+    align-items: center; /* Allinea verticalmente il logo e il testo */
+    gap: 30px; /* Maggiore spaziatura tra il logo e il titolo */
+}
+
+/* Stile per il logo */
+.logo img {
+    max-height: none !important; /* Sovrascrive altre regole */
+    height: 100px !important; /* Forza l'altezza */
+    width: 85px !important; /* Mantiene le proporzioni */
+}
+
+/* Stile per il titolo */
+.title h1 {
+    font-size: 80px; /* Aumenta la dimensione del titolo principale */
+    margin: 0;
+    line-height: 3; /* Riduce lo spazio verticale tra le righe */
+}
+
+
 .thumbnail {
     width: 150px;
     cursor: pointer;
