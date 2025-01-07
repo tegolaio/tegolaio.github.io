@@ -101,6 +101,12 @@ body {
         flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
         gap: 10px; /* Riduce lo spazio tra logo e titolo */
     }
+
+	.logo img {
+		max-height: none !important; 
+		height: 45px !important; 
+		width: 35px !important; 
+	}
 }
 
 
