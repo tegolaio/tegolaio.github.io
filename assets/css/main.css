@@ -78,9 +78,9 @@ body {
 
 /* Stile per il logo */
 .logo img {
-    max-height: none !important; /* Sovrascrive altre regole */
-    height: 100px !important; /* Forza l'altezza */
-    width: 85px !important; /* Mantiene le proporzioni */
+    max-height: none !important; 
+    height: 100px !important; 
+    width: 85px !important; 
 }
 
 /* Stile per il titolo */
@@ -88,6 +88,19 @@ body {
     font-size: 80px; /* Aumenta la dimensione del titolo principale */
     margin: 0;
     line-height: 3; /* Riduce lo spazio verticale tra le righe */
+}
+
+/* Stili per dispositivi con larghezza massima di 768px */
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 2rem; /* Riduce la dimensione del titolo */
+        line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
+    }
+
+    .logo-title {
+        flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
+        gap: 10px; /* Riduce lo spazio tra logo e titolo */
+    }
 }
 
 
