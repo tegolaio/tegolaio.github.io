@@ -79,15 +79,16 @@ body {
 /* Stile per il logo */
 .logo img {
     max-height: none !important; 
-    height: 100px !important; 
-    width: 85px !important; 
+    height: 150px !important; 
+    width: 115px !important; 
 }
 
 /* Stile per il titolo */
 .title h1 {
     font-size: 80px; /* Aumenta la dimensione del titolo principale */
     margin: 0;
-    line-height: 3; /* Riduce lo spazio verticale tra le righe */
+    line-height: 1; /* Riduce lo spazio verticale tra le righe */
+	text-align: left;
 }
 
 /* Stili per dispositivi con larghezza massima di 768px */
@@ -104,8 +105,8 @@ body {
 
 	.logo img {
 		max-height: none !important; 
-		height: 45px !important; 
-		width: 35px !important; 
+		height: 60px !important; 
+		width: 50px !important; 
 	}
 }
 
