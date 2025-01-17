@@ -67,6 +67,13 @@ body {
     gap: 10px;
 }
 
+/* Tabella */
+.dimensions-table {
+	clear: both;
+    width: 100%; /* La tabella occupa tutta la larghezza */
+    text-align: center;
+}
+
 /* Flex header */
 
 /* Contenitore per logo e titolo */
