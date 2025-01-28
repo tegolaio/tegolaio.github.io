@@ -88,6 +88,8 @@ body {
     max-height: none !important; 
     height: 150px !important; 
     width: auto !important; 
+	margin-left: 50px;
+	margin-bottom: 20px;
 }
 
 /* Stile per il titolo */
@@ -121,7 +123,7 @@ body {
 	}
 
     .logo-title {
-        /*flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
+        flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
         gap: 10px; /* Riduce lo spazio tra logo e titolo */
     }
 
@@ -130,6 +132,7 @@ body {
 		height: 60px !important; 
 		width: auto !important; 
 		margin-left: 30px;
+		margin-bottom: 10px;
 	}
 }
 
