@@ -103,7 +103,6 @@ body {
 	font-family: "Henny Penny";
 	font-size: 50px;
 	color: #660066;
-
 }
 
 .motto {
@@ -113,12 +112,16 @@ body {
 /* Stili per dispositivi con larghezza massima di 768px */
 @media (max-width: 768px) {
     .title h1 {
-        font-size: 2rem; /* Riduce la dimensione del titolo */
+        font-size: 1.5rem; /* Riduce la dimensione del titolo */
         line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
     }
+	.inner-title {
+		font-size: 1.5rem; /* Riduce la dimensione del titolo */
+        line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
+	}
 
     .logo-title {
-        flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
+        /*flex-wrap: wrap; /* Permette di spostare il titolo sotto il logo, se necessario */
         gap: 10px; /* Riduce lo spazio tra logo e titolo */
     }
 
@@ -126,6 +129,7 @@ body {
 		max-height: none !important; 
 		height: 60px !important; 
 		width: auto !important; 
+		margin-left: 30px;
 	}
 }
 
