@@ -98,6 +98,18 @@ body {
 	text-align: left;
 }
 
+/* Stile per i titoli interni alle pagine */
+.inner-title {
+	font-family: "Henny Penny";
+	font-size: 50px;
+	color: #660066;
+
+}
+
+.motto {
+	text-align: center;
+}
+
 /* Stili per dispositivi con larghezza massima di 768px */
 @media (max-width: 768px) {
     .title h1 {
@@ -3001,10 +3013,8 @@ input, select, textarea {
 			border-bottom: 0;
 			color: inherit;
 			font-weight: 900;
-			letter-spacing: 0.35em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
-			text-transform: uppercase;
 			display: inline-block;
 		}
 
