@@ -79,7 +79,7 @@ header {
 	display: flex;
     justify-content: center; /* Per centrare il titolo */
     align-items: center;
-    text-align: center;
+    text-align: left;
     flex-wrap: wrap; /* Permette agli elementi interni di andare a capo */
 }
 
@@ -96,6 +96,8 @@ header {
     height: 150px !important; 
     width: auto !important; 
 	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-bottom: 30px;
 }
 
 /* Stile per il titolo */
@@ -104,7 +106,8 @@ header {
     margin: 0;
     line-height: 1; /* Riduce lo spazio verticale tra le righe */
 	text-align: left;
-	text-shadow: 2px 2px 2px black;
+	text-shadow: 3px 3px 3px black;
+	margin-bottom: 60px;
 }
 
 /* Stile per i titoli interni alle pagine */
@@ -122,14 +125,14 @@ header {
 /* Stili per dispositivi con larghezza massima di 768px */
 @media (max-width: 768px) {
     .title h1 {
-        font-size: 1.5rem; /* Riduce la dimensione del titolo */
+        font-size: 40px; /* Riduce la dimensione del titolo */
         line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
 		text-shadow: 1px 1px 1px black;
-		margin-bottom: 50px;
     }
 	.inner-title {
-		font-size: 1.5rem; /* Riduce la dimensione del titolo */
+		font-size: 20px; /* Riduce la dimensione del titolo */
         line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
+		text-shadow: 1px 1px 1px black;
 	}
 
     .logo-title {
