@@ -75,6 +75,13 @@ body {
 }
 
 /* Flex header */
+header {
+	display: flex;
+    justify-content: center; /* Per centrare il titolo */
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap; /* Permette agli elementi interni di andare a capo */
+}
 
 /* Contenitore per logo e titolo */
 .logo-title {
@@ -88,7 +95,6 @@ body {
     max-height: none !important; 
     height: 150px !important; 
     width: auto !important; 
-	margin-left: 50px;
 	margin-bottom: 20px;
 }
 
@@ -98,6 +104,7 @@ body {
     margin: 0;
     line-height: 1; /* Riduce lo spazio verticale tra le righe */
 	text-align: left;
+	text-shadow: 2px 2px 2px black;
 }
 
 /* Stile per i titoli interni alle pagine */
@@ -105,6 +112,7 @@ body {
 	font-family: "Henny Penny";
 	font-size: 50px;
 	color: #660066;
+	text-shadow: 2px 2px 2px black;
 }
 
 .motto {
@@ -116,6 +124,8 @@ body {
     .title h1 {
         font-size: 1.5rem; /* Riduce la dimensione del titolo */
         line-height: 1.2; /* Riduce lo spazio verticale tra le righe */
+		text-shadow: 1px 1px 1px black;
+		margin-bottom: 50px;
     }
 	.inner-title {
 		font-size: 1.5rem; /* Riduce la dimensione del titolo */
@@ -133,9 +143,9 @@ body {
 		width: auto !important; 
 		margin-left: 30px;
 		margin-bottom: 10px;
+		text-shadow: 1px 1px 1px black;
 	}
 }
-
 
 .thumbnail {
     width: 150px;
@@ -257,7 +267,6 @@ input, select, textarea {
 	}
 
 	body {
-		/* background: #ffffff; */
 		background-image: url("/images/back.png");
 		background-repeat: no-repeat;
 		background-size: cover;
