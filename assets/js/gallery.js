@@ -21,12 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
         stopAutoScroll();
     });
 
-    gallery.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const x = e.touches[0].pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 1.5; // Aumenta il fattore per uno scorrimento più reattivo
-        gallery.scrollLeft = scrollLeft - walk;
-    });
+gallery.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Previene lo scroll verticale interferente
+    const x = e.touches[0].pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    gallery.scrollLeft = scrollLeft - walk;
+}, { passive: false }); // Imposta passive a false per permettere preventDefault()
 
     // Stop scorrimento con cursore su PC
     gallery.addEventListener("mouseover", function () {
