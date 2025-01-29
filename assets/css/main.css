@@ -222,6 +222,14 @@ header {
     width: max-content; /* Permette di espandere la gallery senza limiti */
     animation: scrollGallery 60s linear infinite;
 	margin-bottom: 30px;
+	overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+    -ms-overflow-style: none; /* Nasconde la scrollbar su Edge/IE */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none; /* Nasconde la scrollbar su Chrome/Safari */
 }
 
 /* Duplicazione per effetto infinito */
