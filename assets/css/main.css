@@ -204,6 +204,52 @@ header {
 /* End Modal Images */
 
 
+
+/* Gallery */
+
+.gallery-wrapper {
+    width: 100%; /* Occupa tutta la larghezza della pagina */
+    overflow: hidden; /* Nasconde la parte fuori dal contenitore */
+    position: relative;
+    padding: 10px 0;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    animation: scrollGallery 30s linear infinite;
+    width: max-content; /* Impedisce il wrapping delle immagini */
+	margin-bottom: 20px;
+}
+
+/* Duplicazione per effetto infinito */
+.gallery::after {
+    content: "";
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px; /* Dimensione delle immagini */
+    height: 150px; /* Rendiamo le immagini quadrate */
+    object-fit: cover; /* Evita distorsioni */
+    border-radius: 10px; /* Angoli arrotondati opzionali */
+    cursor: pointer; /* Indica che le immagini sono interattive */
+}
+
+/* Animazione infinita */
+@keyframes scrollGallery {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-200px * 5)); /* Sposta solo la prima serie di immagini */
+    }
+}
+
+/* End Gallery */
+
+
 ol, ul {
 	list-style: none;
 }
