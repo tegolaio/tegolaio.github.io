@@ -208,18 +208,20 @@ header {
 /* Gallery */
 
 .gallery-wrapper {
-    width: 100%; /* Occupa tutta la larghezza della pagina */
-    overflow: hidden; /* Nasconde la parte fuori dal contenitore */
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    padding: 10px 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .gallery {
     display: flex;
     gap: 10px;
-    animation: scrollGallery 30s linear infinite;
-    width: max-content; /* Impedisce il wrapping delle immagini */
-	margin-bottom: 20px;
+    width: max-content; /* Permette di espandere la gallery senza limiti */
+    animation: scrollGallery 60s linear infinite;
+	margin-bottom: 30px;
 }
 
 /* Duplicazione per effetto infinito */
@@ -230,20 +232,20 @@ header {
 }
 
 .gallery img {
-    width: 150px; /* Dimensione delle immagini */
-    height: 150px; /* Rendiamo le immagini quadrate */
+    width: 300px; /* Dimensione delle immagini */
+    height: 300px; /* Rendiamo le immagini quadrate */
     object-fit: cover; /* Evita distorsioni */
     border-radius: 10px; /* Angoli arrotondati opzionali */
     cursor: pointer; /* Indica che le immagini sono interattive */
 }
 
-/* Animazione infinita */
+/* Animazione continua */
 @keyframes scrollGallery {
     from {
         transform: translateX(0);
     }
     to {
-        transform: translateX(calc(-200px * 5)); /* Sposta solo la prima serie di immagini */
+        transform: translateX(-50%);
     }
 }
 
