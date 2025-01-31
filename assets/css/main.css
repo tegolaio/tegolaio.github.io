@@ -209,46 +209,39 @@ header {
 
 .gallery-wrapper {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Evita che il wrapper intero scorra */
     position: relative;
-    background: transparent;
     display: flex;
     align-items: center;
-	overflow: hidden; /* ⛔ EVITA che tutto il wrapper scorra */
+    background: transparent;
+	margin-bottom: 30px;
 }
 
 .gallery {
     display: flex;
-    overflow-x: auto; /* ✅ Permette lo swipe SOLO alla gallery */
+    overflow-x: scroll; /* Permette swipe mobile */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    gap: 10px; /* Evita immagini troppo attaccate */
-	margin-bottom: 30px;
+    gap: 10px;
 }
 
+/* Nasconde scrollbar su Chrome/Safari */
 .gallery::-webkit-scrollbar {
-    display: none; /* Nasconde la scrollbar su Chrome/Safari */
+    display: none;
 }
 
+/* Dimensioni delle immagini */
 .gallery img {
-    width: 300px; /* Dimensione delle immagini */
-    height: 300px; /* Rendiamo le immagini quadrate */
-    object-fit: cover; /* Evita distorsioni */
-    border-radius: 10px; /* Angoli arrotondati opzionali */
-    cursor: pointer; /* Indica che le immagini sono interattive */
-	flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-/* Animazione continua */
-@keyframes scrollGallery {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
+/* Evitiamo animazioni CSS che rompono il ciclo */
 
 /* End Gallery */
 
