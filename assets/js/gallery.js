@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.querySelector('.gallery');
+    const images = [...gallery.children];
     let isDragging = false;
     let startX, scrollLeft;
     let autoScroll;
     let isUserScrolling = false;
-    
+
+    // 📌 DUPLICHIAMO LE IMMAGINI PER CREARE L'EFFETTO LOOP
+    images.forEach(img => {
+        let clone = img.cloneNode(true);
+        gallery.appendChild(clone);
+    });
+
     function startAutoScroll() {
         stopAutoScroll();
         if (!isUserScrolling) {
@@ -12,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 gallery.scrollLeft += 1;
 
                 // 🌀 Creiamo un'illusione di ciclo infinito
-                if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+                if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
                     gallery.scrollLeft = 0;
                 }
             }, 20);
