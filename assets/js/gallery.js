@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let isUserScrolling = false;
 
     function startAutoScroll() {
-        stopAutoScroll(); // Evita duplicati
+        stopAutoScroll();
         if (!isUserScrolling) {
             autoScroll = setInterval(() => {
                 gallery.scrollLeft += 1;
-            }, 30);
+                if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+                    gallery.scrollLeft = 0; // Reset per ciclo infinito
+                }
+            }, 20);
         }
     }
 
@@ -18,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
         clearInterval(autoScroll);
     }
 
-    // ✅ FIX: Ora lo stop su PC funziona!
+    // 🖱️ STOP SU PC QUANDO IL MOUSE È SOPRA
     gallery.addEventListener('mouseenter', stopAutoScroll);
     gallery.addEventListener('mouseleave', startAutoScroll);
 
-    // ✅ FIX: Swipe su mobile ora funziona senza problemi!
+    // 📱 GESTIONE SWIPE SU MOBILE
     gallery.addEventListener('touchstart', (e) => {
         isDragging = true;
         isUserScrolling = true;
@@ -34,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
     gallery.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         const x = e.touches[0].pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 1.5;
+        const walk = (x - startX) * 1.5; // Sensibilità swipe
         gallery.scrollLeft = scrollLeft - walk;
     });
 
     gallery.addEventListener('touchend', () => {
         isDragging = false;
         isUserScrolling = false;
-        setTimeout(startAutoScroll, 2000); // Riprende lo scorrimento dopo 2 sec
+        setTimeout(startAutoScroll, 2000); // Riprende dopo 2 sec
     });
 
     startAutoScroll();
