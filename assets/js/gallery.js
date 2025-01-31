@@ -1,16 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.querySelector('.gallery');
+    const galleryWrapper = document.querySelector('.gallery-wrapper');
     let isDragging = false;
     let startX, scrollLeft;
     let autoScroll;
     let isUserScrolling = false;
 
+    // Clona le immagini per creare un effetto di loop infinito
+    function duplicateImages() {
+        const images = [...gallery.children];
+        images.forEach(img => {
+            let clone = img.cloneNode(true);
+            gallery.appendChild(clone);
+        });
+    }
+
     function startAutoScroll() {
-        if (isUserScrolling || autoScroll) return; // Evita di avviare più volte
+        if (isUserScrolling || autoScroll) return; // Evita più intervalli
         autoScroll = setInterval(() => {
             gallery.scrollLeft += 1;
-            if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-                gallery.scrollLeft = 0; // Reset per scorrimento infinito
+            if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+                gallery.scrollLeft = 0; // Reset per loop infinito senza scatti
             }
         }, 20);
     }
@@ -20,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         autoScroll = null;
     }
 
+    // Avvia la duplicazione delle immagini per scorrimento infinito fluido
+    duplicateImages();
+    startAutoScroll();
+
+    // Touch e drag per mobile
     gallery.addEventListener('touchstart', (e) => {
         isDragging = true;
         isUserScrolling = true;
@@ -30,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     gallery.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
-        e.preventDefault(); // Evita scroll verticale indesiderato
+        e.preventDefault();
         const x = e.touches[0].pageX - gallery.offsetLeft;
         const walk = (x - startX) * 1.5;
         gallery.scrollLeft = scrollLeft - walk;
@@ -41,16 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             isUserScrolling = false;
             startAutoScroll();
-        }, 2000); // Riprende lo scorrimento dopo 2 secondi di inattività
+        }, 2000);
     });
 
+    // Stop scorrimento quando il mouse entra nella gallery
     gallery.addEventListener('mouseenter', () => {
-        stopAutoScroll(); // STOP allo scorrimento quando il mouse entra
+    stopAutoScroll();
     });
 
+    // Riprendi scorrimento quando il mouse esce dalla gallery
     gallery.addEventListener('mouseleave', () => {
-        startAutoScroll(); // RIPRENDE quando il mouse esce
+    if (!isUserScrolling) startAutoScroll();
     });
 
-    startAutoScroll();
 });
