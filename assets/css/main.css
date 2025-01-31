@@ -209,7 +209,7 @@ header {
 
 .gallery-wrapper {
     width: 100%;
-    overflow: hidden; /* Evita che il wrapper intero scorra */
+    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
@@ -219,19 +219,17 @@ header {
 
 .gallery {
     display: flex;
-    overflow-x: scroll; /* Permette swipe mobile */
+    overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
     gap: 10px;
 }
 
-/* Nasconde scrollbar su Chrome/Safari */
 .gallery::-webkit-scrollbar {
     display: none;
 }
 
-/* Dimensioni delle immagini */
 .gallery img {
     width: 300px;
     height: 300px;
