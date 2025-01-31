@@ -214,28 +214,21 @@ header {
     background: transparent;
     display: flex;
     align-items: center;
+	overflow: hidden; /* ⛔ EVITA che tutto il wrapper scorra */
 }
 
 .gallery {
     display: flex;
-    gap: 10px;
-    width: max-content; /* Permette di espandere la gallery senza limiti */
-    animation: scrollGallery 60s linear infinite;
-	margin-bottom: 30px;
+    overflow-x: auto; /* ✅ Permette lo swipe SOLO alla gallery */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
-    -ms-overflow-style: none; /* Nasconde la scrollbar su Edge/IE */
+    gap: 10px; /* Evita immagini troppo attaccate */
+	margin-bottom: 30px;
 }
 
 .gallery::-webkit-scrollbar {
     display: none; /* Nasconde la scrollbar su Chrome/Safari */
-}
-
-/* Duplicazione per effetto infinito */
-.gallery::after {
-    content: "";
-    display: flex;
-    gap: 10px;
 }
 
 .gallery img {
@@ -244,6 +237,7 @@ header {
     object-fit: cover; /* Evita distorsioni */
     border-radius: 10px; /* Angoli arrotondati opzionali */
     cursor: pointer; /* Indica che le immagini sono interattive */
+	flex-shrink: 0;
 }
 
 /* Animazione continua */
