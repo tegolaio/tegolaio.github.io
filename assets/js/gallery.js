@@ -4,14 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let startX, scrollLeft;
     let autoScroll;
     let isUserScrolling = false;
-
+    
     function startAutoScroll() {
         stopAutoScroll();
         if (!isUserScrolling) {
             autoScroll = setInterval(() => {
                 gallery.scrollLeft += 1;
+
+                // 🌀 Creiamo un'illusione di ciclo infinito
                 if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
-                    gallery.scrollLeft = 0; // Reset per ciclo infinito
+                    gallery.scrollLeft = 0;
                 }
             }, 20);
         }
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clearInterval(autoScroll);
     }
 
-    // 🖱️ STOP SU PC QUANDO IL MOUSE È SOPRA
+    // 🖱️ STOP SCROLL SU PC QUANDO IL MOUSE È SOPRA
     gallery.addEventListener('mouseenter', stopAutoScroll);
     gallery.addEventListener('mouseleave', startAutoScroll);
 
@@ -37,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
     gallery.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         const x = e.touches[0].pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 1.5; // Sensibilità swipe
+        const walk = (x - startX) * 1.5;
         gallery.scrollLeft = scrollLeft - walk;
     });
 
     gallery.addEventListener('touchend', () => {
         isDragging = false;
         isUserScrolling = false;
-        setTimeout(startAutoScroll, 2000); // Riprende dopo 2 sec
+        setTimeout(startAutoScroll, 2000); // 🕐 Riprende dopo 2 sec
     });
 
     startAutoScroll();
