@@ -214,16 +214,15 @@ header {
     display: flex;
     align-items: center;
     background: transparent;
-	margin-bottom: 30px;
 }
 
 .gallery {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
     white-space: nowrap;
     gap: 10px;
+    user-select: none; /* Evita selezione involontaria */
+	margin-bottom: 30px;
 }
 
 .gallery::-webkit-scrollbar {
@@ -238,8 +237,6 @@ header {
     cursor: pointer;
     flex-shrink: 0;
 }
-
-/* Evitiamo animazioni CSS che rompono il ciclo */
 
 /* End Gallery */
 
