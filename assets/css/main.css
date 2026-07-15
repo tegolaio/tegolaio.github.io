@@ -2936,6 +2936,8 @@ input, select, textarea {
 					.tiles article > a .content > :last-child {
 						margin-bottom: 0;
 					}
+			
+			/* Tiles Styles */
 
 			.tiles article.style1 > .image:before {
 				background-color: #0d83d7;
@@ -2959,6 +2961,12 @@ input, select, textarea {
 
 			.tiles article.style6 > .image:before {
 				background-color: #8499e7;
+			}
+
+			/* Nativities Styles */
+
+			.tiles article.style7 > .image:before {
+				background-color: #d4a809;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -3557,3 +3565,72 @@ input, select, textarea {
 			}
 
 		}
+
+#nav-bar {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 70px; /* più spazio tra le voci */
+
+    margin-top: 30px;
+    padding: 12px 45px;
+
+    width: fit-content;
+
+    background: #edb52a;
+    backdrop-filter: blur(8px);
+
+    border-radius: 40px;
+
+    box-shadow: 
+        0 8px 25px rgba(0,0,0,0.12),
+        inset 0 0 0 1px rgba(255,255,255,0.6);
+
+}
+
+#nav-bar a {
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #333;
+
+    transition: 
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+#nav-bar a:hover {
+    color: #8c4fd8;
+    transform: translateY(-3px);
+}
+
+@media screen and (max-width: 600px) {
+
+    #nav-bar {
+        gap: 25px;
+        padding: 10px 25px;
+    }
+
+    #nav-bar a {
+        font-size: 16px;
+    }
+
+}
+
+#header .inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
