@@ -3625,6 +3625,23 @@ input, select, textarea {
 
 }
 
+#nav-bar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.25s ease;
+}
+
+/* voce attiva */
+#nav-bar a.active {
+    color: white;
+    background: #8c4fd8;
+    padding: 6px 18px;
+    border-radius: 20px;
+}
+
+
 #header .inner {
     display: flex !important;
     flex-direction: column !important;
